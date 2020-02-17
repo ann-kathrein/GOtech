@@ -439,6 +439,62 @@ main {
     bottom: 5px;
 }
 
+.logo-centered {
+    text-align: center;
+}
+
+.footer {
+    margin-top: 100px;
+    padding: 0 20px;
+}
+
+.footer-titles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contact {
+    flex-direction: column;
+    
+}
+
+.mail {
+    flex-direction: row;
+}
+
+
+.address-text {
+    color: #CCCCCC;
+    font-weight: normal;
+    width: 55%;
+}
+
+.facebook {
+    background: linear-gradient(to right, #7F6AD9, #9D60EB);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.skype {
+    background: linear-gradient(to right, #00B56C, #9EE69D);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.linkedin {
+    background: linear-gradient(to right, #FF9AB6, #F03295);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.instagram { 
+    background: linear-gradient(to right, #F09376, #F0DB79);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+
 
 
 
