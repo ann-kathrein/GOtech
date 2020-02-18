@@ -446,28 +446,58 @@ main {
 .footer {
     margin-top: 100px;
     padding: 0 20px;
+    align-items: center;
 }
 
 .footer-titles {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .contact {
-    flex-direction: column;
-    
+    flex-direction: column;  
+}
+
+.contact-grey {
+    display: flex;
+    color: #CCCCCC;
+    font-weight: normal;
+    justify-content: flex-end;
 }
 
 .mail {
+    display: flex;
     flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 }
 
+.mail-img{
+    height: 20%;
+    margin-right: 30px;
+}
+
+.question {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.question-img {
+    height: 20%;
+    margin-right: 20px;
+}
+
+.address{
+    width: 25%;
+}
 
 .address-text {
     color: #CCCCCC;
     font-weight: normal;
-    width: 55%;
 }
 
 .facebook {
@@ -477,9 +507,11 @@ main {
 }
 
 .skype {
+    border: 10px;
     background: linear-gradient(to right, #00B56C, #9EE69D);
     border-radius: 50%;
     padding: 15px;
+   
 }
 
 .linkedin {
