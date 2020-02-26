@@ -201,8 +201,19 @@
     flex-direction: column;
     margin: 30px auto 0 auto;
     align-items: center;
-    max-width: 100%;
+    width: 400px;
     padding: 0 50px;
+}
+
+@media (min-width: 40rem) {
+    .section-container4 {
+        display: flex;
+        flex-direction: column;
+        margin: 30px auto 0 auto;
+        align-items: center;
+        width: 950px;
+        padding: 0 50px;
+    }
 }
 
 .boxshades2 {
@@ -291,11 +302,13 @@
 .section5 {
     position: relative;
     max-width: 100%;
+    height: max-content;
 }
 
 @media (min-width: 40rem) {
     .section5 {
         position: relative;
+        height: max-content;
     }
 }
 
@@ -317,16 +330,21 @@
     top: 210px;
 }
 
+
+
 .albert {
     position: relative;
     right: -80px;
+   
 }
 
 .jurica {
     position: relative;
     left: 120px;
     bottom: 100px;
+    height: 70px;
 }
+
 
 .tyler {
     position: relative;

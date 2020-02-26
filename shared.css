@@ -197,6 +197,10 @@ NAV
         top: 100%;
         left: 40%;
     }
+
+    a:active {
+        color: #A174DB;
+    }
 }
 
 
@@ -234,6 +238,7 @@ input {
 
 .hidden {
     visibility: hidden;
+    display: none;
 }
 
 .purplebtn {
@@ -360,7 +365,7 @@ FORMULAR
 @media (min-width: 40rem) {
     .formular {
         background-color: #FFFFFF;
-        width: 60vw;
+        width: 620px;
         margin: auto;
         border-radius: 2%;
         display: flex;
@@ -535,30 +540,66 @@ FOOTER
     font-weight: normal;
 }
 
-.facebook {
-    background: linear-gradient(to right, #7F6AD9, #9D60EB);
+.socialButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.ButtonFacebook {
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
-    padding: 15px;
+    background: linear-gradient(to right top, #6362D7, #FF8FE2);
+    position: relative;
+}
+
+.facebook {
+    position: absolute;
+    left: 13px;
+    top: 8px;
+}
+
+.ButtonSkype {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: linear-gradient(to right top, #00B56C, #9EE69D);
+    position: relative;
 }
 
 .skype {
-    border: 10px;
-    background: linear-gradient(to right, #00B56C, #9EE69D);
+    position: absolute;
+    left: 12px;
+    top: 11px;  
+}
+
+.ButtonLinkedin {
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
-    padding: 15px;
-   
+    background: linear-gradient(to right top,  #FF9AB6, #F03295);
+    position: relative;
 }
 
 .linkedin {
-    background: linear-gradient(to right, #FF9AB6, #F03295);
+    position: relative;
+    left: 12px;
+    top: 9px; 
+}
+
+.ButtonInstagram {
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
-    padding: 15px;
+    background: linear-gradient(to right top,  #F09376, #F0DB79);
+    position: relative;
 }
 
 .instagram { 
-    background: linear-gradient(to right, #F09376, #F0DB79);
-    border-radius: 50%;
-    padding: 15px;
+    position: relative;
+    left: 12px;
+    top: 9px; 
 }
 
 .footer-position {
@@ -630,22 +671,18 @@ FOOTER
     display: flex;
     justify-content: flex-start;
   }
-
   .mainNav ul {
     display: flex;
   }
-
   .navItem {
     margin-right: 10px;
   }
 }
-
 @media (min-width: 1000px) {
   main {
     margin: 0 auto;
     max-width: 1000px;
   }
-
   .headerContent {
     margin: 0 auto;
     max-width: 1000px;
