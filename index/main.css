@@ -35,17 +35,25 @@
     }
 }
 
+.phoneNone {
+    display: none;
+}
 
-
+@media (min-width: 40rem) {
+    .phoneNone {
+        display: unset;
+    }
+}
 
 
 .bluelane {
-    background-image: linear-gradient(to right, #FFFFFF, #AAD7FF);
+    display: none;
+    /*background-image: linear-gradient(to right, #FFFFFF, #AAD7FF);
     padding: 50px 0;
     width: 100%;
     position: absolute;
     z-index: -1;
-    top: 400px;
+    top: 400px;*/
 }
 @media (min-width: 40rem) {
     .bluelane {
@@ -55,8 +63,10 @@
         position: absolute;
         z-index: -1;
         top: 640px;
+        display: unset;
         }
 }
+
 
 
 
@@ -78,6 +88,7 @@
     max-width:100%;
     height:auto;  
 }
+
 
 
 .text {
@@ -155,6 +166,16 @@
     flex-direction: column;
 }
 
+.arrow {
+    box-shadow: 20px 20px 50px #CCCCCC;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    padding: 1.5%;
+    background-color: #FFFFFF;
+    margin: 3% 1.5%;
+    height: 20px;
+}
+
 @media (min-width: 40rem) {
     .boxshades {
         box-shadow: 20px 20px 50px #CCCCCC;
@@ -174,6 +195,7 @@
         padding: 1.5%;
         background-color: #FFFFFF;
         margin: 3% 1.5%;
+        height: unset;
     }
 }
 
@@ -181,14 +203,7 @@
     margin: 10% 10%;
 }
 
-.arrow {
-    box-shadow: 20px 20px 50px #CCCCCC;
-    border: 1px solid #FFFFFF;
-    border-radius: 50%;
-    padding: 1.5%;
-    background-color: #FFFFFF;
-    margin: 3% 1.5%;
-}
+
 
 
 .textcentered2 {
@@ -230,6 +245,7 @@
 .boxshades2_flexstart {
     display: flex;
     flex-direction: row;
+    align-self: flex-start;
     box-shadow: 5px 5px 15px #CCCCCC;
     margin: 2% 1.5%;
     max-width: 80%;
@@ -283,6 +299,7 @@
         width: 30%;
         color: #999999;
     }
+    
     .imgposition4 {
         max-height: 50%;
         margin: auto;
@@ -295,6 +312,7 @@
         text-decoration: none;
         font-size: 0.75rem;
     }
+   
 }
 
 
@@ -317,62 +335,124 @@
     margin: 30px auto 20px auto;
 }
 
+@media (min-width: 40rem) {
+    .textcentered3 {
+        width: 300px;
+        margin: 30px auto 20px auto;
+    }
+}
+
 .quote-left {
     position: absolute;
     transform: scaleX(-1);
-    left: 200px;
-    top: 210px;
+    left: 60px;
+    top: 220px;
+    height: 20px;
 }
 
 .quote-right {
     position: absolute;
-    right: 200px;
-    top: 210px;
+    right: 60px;
+    top: 220px;
+    height: 20px;
 }
 
+@media (min-width: 40rem) {
+    .quote-left {
+        position: absolute;
+        transform: scaleX(-1);
+        left: 350px;
+        top: 210px;
+    }
+    
+    .quote-right {
+        position: absolute;
+        right: 350px;
+        top: 210px;
+    }
+}
 
 
 .albert {
     position: relative;
-    right: -80px;
+    right: -100px;
    
 }
 
 .jurica {
-    position: relative;
-    left: 120px;
-    bottom: 100px;
-    height: 70px;
+    display: none;
 }
 
 
 .tyler {
-    position: relative;
-    left: -80px;
-    top: 70px;
+    display: none;
 }
 
 .parker {
-    position: relative;
-    right: 120px;
-    top: 270px;
+    display: none;
 }
 
 .azami {
-    position: relative;
-    left: 250px;
-    bottom: 80px;
+    display: none;
 }
 
 .eduardo {
-    position: relative;
-    left: 250px;
-    top: 80px;
+    display: none;
 }
 
 .noname {
-    position: relative;
-    left: 100px;
-    top: 270px;
+    display: none;
+}
+
+@media (min-width: 40rem) {
+    .albert {
+        position: relative;
+        left: 150px;
+       
+    }
+    
+    .jurica {
+        position: relative;
+        left: 200px;
+        bottom: 100px;
+        height: 70px;
+        display: unset;
+    }
+    
+    
+    .tyler {
+        position: relative;
+        left: 0px;
+        top: 70px;
+        display: unset;
+    }
+    
+    .parker {
+        position: relative;
+        right: 40px;
+        top: 270px;
+        display: unset;
+    }
+    
+    .azami {
+        position: relative;
+        left: 320px;
+        bottom: 80px;
+        display: unset;
+    }
+    
+    .eduardo {
+        position: relative;
+        left: 300px;
+        top: 80px;
+        display: unset;
+    }
+    
+    .noname {
+        position: relative;
+        left: 130px;
+        top: 270px;
+        display: unset;
+    }
 }
 
