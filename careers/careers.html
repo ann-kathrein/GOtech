@@ -92,13 +92,13 @@
                 <h3>Find your seat <span class="unbold">at our table</span></h3>
             </div>
             <div class="button-flex">
-                <button class="purplebtn2">All Together</button>
-                <button class="purplelinebtn2">Designer</button>
-                <button class="purplelinebtn2">Developer</button>
-                <button class="purplelinebtn2">Management</button>
+                <button class="purplebtn2" id="allTogetherBtn" onclick="btnListener('allTogetherBtn');">All Together</button>
+                <button class="purplelinebtn2" id="designerBtn" onclick="btnListener('designerBtn');">Designer</button>
+                <button class="purplelinebtn2" id="developerBtn" onclick="btnListener('developerBtn');">Developer</button>
+                <button class="purplelinebtn2" id="managementBtn" onclick="btnListener('managementBtn');">Management</button>
             </div>
             <div class="jobs">
-                <div class="box-jobs">
+                <div class="box-jobs dev">
                     <h4>PHP Developer</h4>
                     <h5 class="grey">London, United Kingdom</h5>
                     <div class="greylane"></div>
@@ -109,7 +109,7 @@
                     </div>
                     <button class="purplebtn">View Details</button>
                 </div>
-                <div class="box-jobs">
+                <div class="box-jobs dev">
                     <h4>Laravel Developer</h4>
                     <h5 class="grey">London, United Kingdom</h5>
                     <div class="greylane"></div>
@@ -120,7 +120,7 @@
                     </div>
                     <button class="purplelinebtn3">View Details</button>
                 </div>
-                <div class="box-jobs">
+                <div class="box-jobs designer">
                     <h4>UI/UX Designer</h4>
                     <h5 class="grey">London, United Kingdom</h5>
                     <div class="greylane"></div>
@@ -131,7 +131,7 @@
                     </div>
                     <button class="purplelinebtn3">View Details</button>
                 </div>
-                <div class="box-jobs">
+                <div class="box-jobs mgmt">
                     <h4>Project Manager</h4>
                     <h5 class="grey">London, United Kingdom</h5>
                     <div class="greylane"></div>
@@ -142,7 +142,7 @@
                     </div>
                     <button class="purplelinebtn3">View Details</button>
                 </div>
-                <div class="box-jobs">
+                <div class="box-jobs mgmt">
                     <h4>HR Manager</h4>
                     <h5 class="grey">London, United Kingdom</h5>
                     <div class="greylane"></div>
@@ -153,7 +153,7 @@
                     </div>
                     <button class="purplelinebtn3">View Details</button>
                 </div>
-                <div class="box-jobs">
+                <div class="box-jobs designer">
                     <h4>UX Designer</h4>
                     <h5 class="grey">London, United Kingdom</h5>
                     <div class="greylane"></div>
@@ -164,7 +164,7 @@
                     </div>
                     <button class="purplelinebtn3">View Details</button>
                 </div>
-                <div class="box-jobs">
+                <div class="box-jobs mgmt">
                     <h4>QA Officer</h4>
                     <h5 class="grey">London, United Kingdom</h5>
                     <div class="greylane"></div>
@@ -175,7 +175,7 @@
                     </div>
                     <button class="purplelinebtn3">View Details</button>
                 </div>
-                <div class="box-jobs">
+                <div class="box-jobs dev">
                     <h4>JavaScript Developer</h4>
                     <h5 class="grey">London, United Kingdom</h5>
                     <div class="greylane"></div>
@@ -186,7 +186,7 @@
                     </div>
                     <button class="purplelinebtn3">View Details</button>
                 </div>
-                <div class="box-jobs">
+                <div class="box-jobs designer">
                     <h4>UI Designer</h4>
                     <h5 class="grey">London, United Kingdom</h5>
                     <div class="greylane"></div>
@@ -209,34 +209,48 @@
                 <div class="formular">
                     <div class="name-section">
                         <div class="firstname">
-                            <div><p>First Name</p></div>
-                            <div class="formular-grey"><p class="unbold">Robert Lee</p></div>
-                            <div class="greylane"></div>
+                            <div>
+                                <p>First Name</p>
+                            </div>
+                            <!--<div class="formular-grey"><p class="unbold">Robert Lee</p></div>-->
+                            <input type="text" class="inputFormular" placeholder="Robert Lee" id="firstName">
+                            <div class="greylaneFormular"></div>
                         </div>
-                        <div class="lastname"> 
-                            <div><p>Last Name</p></div>
-                            <div class="formular-grey"><p class="unbold">Anderson</p></div>
-                            <div class="greylane"></div>
+                        <div class="lastname">
+                            <div>
+                                <p>Last Name</p>
+                            </div>
+                            <input type="text" class="inputFormular" placeholder="Anderson" id="lastName">
+                            <div class="greylaneFormular"></div>
                         </div>
                     </div>
-                    <div class="email"> 
-                        <div><p>Your Email Adress</p></div>
-                        <div class="formular-grey"><p class="unbold">kevin.jones@mail.com</p></div>
-                        <div class="greylane"></div>
+                    <div class="email">
+                        <div>
+                            <p>Your Email Adress</p>
+                        </div>
+                        <input type="text" class="inputFormular" placeholder="evin.jones@mail.com" id="mailAdress">
+                        <div class="greylaneFormular"></div>
                     </div>
-                    <div class="email"> 
-                        <div><p>Which Related Problem You Are Facing?</p></div>
-                        <div class="formular-grey"><p class="unbold">Select One</p></div>
-                        <div class="greylane"></div>
+                    <div class="email">
+                        <div>
+                            <p>Which Related Problem You Are Facing?</p>
+                        </div>
+                        <div class="formular-grey">
+                            <p class="unbold">Select One</p>
+                        </div>
+                        <!-- Dropdownmenü-->
+                        <div class="greylaneFormular"></div>
                     </div>
-                    <div class="email"> 
-                        <div><p>Type Your Message</p></div>
-                        <div class="formular-grey"><p class="unbold">Lorem Ipsum is simply dummy text of the printing and...…….</p></div>
+                    <div class="email">
+                        <div>
+                            <p>Type Your Message</p>
+                        </div>
+                        <input type="text" class="inputFormular"
+                            placeholder="Lorem Ipsum is simply dummy text of the printing and...……." id="message">
                         <div class="greylane-message"></div>
                     </div>
-                    <button class="purplebtn-formular">Our Works</button>
+                    <button class="purplebtn-formular" id="createFile">Our Works</button>
                 </div>
-            
                 <img src="../images/Group -4.png" class="yellowman">
                 <img src="../images/Group -6.png" class="purpleman">
                 <img src="../images/group -5.png" class="pinkwoman ">
@@ -245,7 +259,7 @@
 
 
       </main>
-
+      <script src="scriptCareer.js"></script>
   </body>
 
   <footer>

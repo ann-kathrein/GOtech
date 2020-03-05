@@ -23,7 +23,7 @@
             <li class="navItem"><a href="#">Blog</a></li>
             <li class="navItem">
                 <div class="inputgroup">
-                    <input type="text">
+                    <input class="inputHeader" type="text">
                     <button class="button-search "><span class="hidden">search</span>
                     <img src="../images/search.png" class="img-search" alt="search"></button>
                 </div>
@@ -229,40 +229,45 @@
                     <div class="name-section">
                         <div class="firstname">
                             <div><p>First Name</p></div>
-                            <div class="formular-grey"><p class="unbold">Robert Lee</p></div>
-                            <div class="greylane"></div>
+                            <!--<div class="formular-grey"><p class="unbold">Robert Lee</p></div>-->
+                            <input type="text" class="inputFormular" placeholder="Robert Lee" id="firstName">
+                            <div class="greylaneFormular"></div>
                         </div>
                         <div class="lastname"> 
                             <div><p>Last Name</p></div>
-                            <div class="formular-grey"><p class="unbold">Anderson</p></div>
-                            <div class="greylane"></div>
+                            <input type="text" class="inputFormular" placeholder="Anderson" id="lastName">
+                            <div class="greylaneFormular"></div>
                         </div>
                     </div>
                     <div class="email"> 
                         <div><p>Your Email Adress</p></div>
-                        <div class="formular-grey"><p class="unbold">kevin.jones@mail.com</p></div>
-                        <div class="greylane"></div>
+                        <input type="text" class="inputFormular" placeholder="evin.jones@mail.com" id="mailAdress">
+                        <div class="greylaneFormular"></div>
                     </div>
                     <div class="email"> 
                         <div><p>Which Related Problem You Are Facing?</p></div>
                         <div class="formular-grey"><p class="unbold">Select One</p></div>
-                        <div class="greylane"></div>
+                        <!-- Dropdownmenü-->
+                        <div class="greylaneFormular"></div>
                     </div>
                     <div class="email"> 
                         <div><p>Type Your Message</p></div>
-                        <div class="formular-grey"><p class="unbold">Lorem Ipsum is simply dummy text of the printing and...…….</p></div>
+                        <input type="text" class="inputFormular" placeholder="Lorem Ipsum is simply dummy text of the printing and...……." id="message">
                         <div class="greylane-message"></div>
                     </div>
-                    <button class="purplebtn-formular">Our Works</button>
+                    <button class="purplebtn-formular" id="createFile">Our Works</button>
                 </div>
-            
                 <img src="../images/Group -4.png" class="yellowman">
                 <img src="../images/Group -6.png" class="purpleman">
                 <img src="../images/group -5.png" class="pinkwoman ">
             </div>
         </section>
+       
 
         </main>
+        <script src="../sharedscript.js"></script>
+        <script src="script.js"></script>
+       
   </body>
 
   <footer>
