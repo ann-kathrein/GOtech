@@ -1,3 +1,5 @@
+'use strict';
+
 function btnListener(id) {
 	changeColour(id);
 	if (id === 'developerBtn') {

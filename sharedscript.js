@@ -1,5 +1,9 @@
 'use strict';
 
+const mobileNav = document.querySelector('.smallScreen');
+const menuButton = document.querySelector('.checkbox');
+const menuButton = document.querySelector('.checkbox');
+
 /*
 var backdrop = document.querySelector('#backdrop');
 var toggleButton = document.querySelector('.toggle-button ');
@@ -22,17 +26,19 @@ function closeMobileNav() {
 mobileNav.addEventListener('click', closeMobileNav); */
 
 /*FORMULAR*/
-const firstName = document.getElementById('firstName');
-const lastName = document.getElementById('lastName');
+const firstNameInput = document.getElementById('firstName');
+const lastNameInput = document.getElementById('lastName');
 const mailAdressInput = document.getElementById('mailAdress');
-const message = document.getElementById('message');
+const messageInput = document.getElementById('message');
 const submitBtn = document.getElementById('submitBtn');
 
-/*let mailAdressClean = mailAdressInput.trim().toLowerCase();*/
+//let mailAdressClean = mailAdressInput.trim().toLowerCase();
 
 function submitForm() {
 	event.preventDefault();
-	alert('Name: ${firstName}${lastName}, eMail: ${mailAdressClean}, Message: ${message}');
+	alert(
+		`Name: ${firstNameInput.value} ${lastNameInput.value}, eMail: ${mailAdressInput.value}, Message: ${messageInput.value}`
+	);
 }
 
 submitBtn.addEventListener('click', submitForm);
