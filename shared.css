@@ -227,13 +227,14 @@ NAV
   display: none;
 }
 
-.hamburger-active {
-  display: block;
-}
-
 .navMobileLinks > a {
   text-decoration: none;
   list-style: none;
+  color: #555555;
+}
+
+.navMobileLinks a:hover {
+  color: #9d60eb;
 }
 
 .hamIconContainer {
@@ -243,7 +244,7 @@ NAV
   position: relative;
   display: block;
   bottom: 50px;
-  left: 280px;
+  left: 300px;
   cursor: pointer;
 }
 
@@ -269,6 +270,11 @@ NAV
 
 .hamIcon:after {
   top: 0.55em;
+}
+
+.hamburger-active {
+  display: block;
+  width: 230px;
 }
 
 .hamburger-active .hamIconContainer {

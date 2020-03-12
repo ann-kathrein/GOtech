@@ -28,5 +28,4 @@ function submitForm() {
     `Name: ${firstNameInput.value} ${lastNameInput.value}, eMail: ${mailAdressInput.value}, Message: ${messageInput.value}`
   );
 }
-
 submitBtn.addEventListener('click', submitForm);
