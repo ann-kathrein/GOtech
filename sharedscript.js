@@ -1,15 +1,18 @@
 'use strict';
 
-// ######## Nav mobile ###########
+// ######## Nav Mobile ###########
 
 document.getElementById('hamburger').addEventListener('click', navStatus);
 
 function navStatus() {
-  let menuElement = document.querySelector('.menu').classList;
-  if (menuElement.contains('hamburger-active')) {
-    menuElement.remove('hamburger-active');
+  let menuElement = document.querySelector('.menu');
+  //let icon = document.querySelector('.hamIcon');
+  if (menuElement.classList.contains('menu-active')) {
+    menuElement.classList.remove('menu-active');
+    //icon.classList.remove('hamburger-active');
   } else {
-    menuElement.add('hamburger-active');
+    menuElement.classList.add('menu-active');
+    //icon.classList.add('hamburger-active');
   }
 }
 
@@ -20,12 +23,23 @@ const mailAdressInput = document.getElementById('mailAdress');
 const messageInput = document.getElementById('message');
 const submitBtn = document.getElementById('submitBtn');
 
-//let mailAdressClean = mailAdressInput.trim().toLowerCase();
+//let mailAdressClean = mailAdressInput.toLowerCase();
 
-function submitForm() {
-  event.preventDefault();
-  alert(
-    `Name: ${firstNameInput.value} ${lastNameInput.value}, eMail: ${mailAdressInput.value}, Message: ${messageInput.value}`
-  );
+function validate() {
+  if (
+    firstName.value.length > 0 &&
+    lastName.value.length > 0 &&
+    mailAdress.value.length > 4 &&
+    //mailAdress.includes('@') &&
+    //mailAdress.includes('.') &&
+    message.value.length > 0
+  ) {
+    event.preventDefault();
+    alert(
+      `Name: ${firstNameInput.value} ${lastNameInput.value}, eMail: ${mailAdressInput.value}, Message: ${messageInput.value}`
+    );
+  } else {
+    alert('Please fill in all fields.');
+  }
 }
-submitBtn.addEventListener('click', submitForm);
+submitBtn.addEventListener('click', validate);

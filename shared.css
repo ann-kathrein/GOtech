@@ -113,7 +113,8 @@ NAV
   margin-top: 30px;
   margin-left: 20px;
 }
-/* ##### CSS mobileNav WORKING #####
+
+/* ##### CSS only mobileNav WORKING #####
 #menuToggle {
 	display: block;
 	position: relative;
@@ -220,7 +221,7 @@ NAV
 .menu {
   position: absolute;
   width: 300px;
-  margin: -100px 0 0 -150px;
+  margin: -100px 0 0 -125px;
   padding: 25px;
   padding-top: 125px;
   background: #ebebeb;
@@ -272,28 +273,29 @@ NAV
   top: 0.55em;
 }
 
-.hamburger-active {
+.menu-active {
   display: block;
   width: 230px;
 }
 
-.hamburger-active .hamIconContainer {
+/*soll das Menü zu einem X drehen // funktioniert nicht */
+/*.hamIconContainer .hamburger-active {
   color: #ffffff;
 }
 
-.hamburger-active .hamIcon {
+.hamIcon .hamburger-active {
   background: transparent;
   transform: rotate(-135deg);
 }
 
-.hamburger-active .hamIcon:before,
-.hamburger-active .hamIcon:after {
+.hamIcon .hamburger-active :before,
+.hamIcon .hamburger-active:after {
   top: 0;
 }
 
-.hamburger-active .hamIcon:before {
+.hamIcon .hamburger-active :before {
   transform: rotate(90deg);
-}
+}*/
 
 .active {
   color: #a174db;
