@@ -6,13 +6,15 @@ document.getElementById('hamburger').addEventListener('click', navStatus);
 
 function navStatus() {
   let menuElement = document.querySelector('.menu');
-  //let icon = document.querySelector('.hamIcon');
+  let icon = document.querySelector('.hamIcon');
   if (menuElement.classList.contains('menu-active')) {
     menuElement.classList.remove('menu-active');
-    //icon.classList.remove('hamburger-active');
+    icon.classList.remove('hamburger-active');
+    document.body.style.overflow = 'auto';
   } else {
     menuElement.classList.add('menu-active');
-    //icon.classList.add('hamburger-active');
+    document.body.style.overflow = 'hidden';
+    icon.classList.add('hamburger-active');
   }
 }
 
@@ -23,16 +25,17 @@ const mailAdressInput = document.getElementById('mailAdress');
 const messageInput = document.getElementById('message');
 const submitBtn = document.getElementById('submitBtn');
 
-//let mailAdressClean = mailAdressInput.toLowerCase();
+//Modal;
 
 function validate() {
+  //let mailAdressClean = mailAdressInput.toLowerCase();
   if (
-    firstName.value.length > 0 &&
-    lastName.value.length > 0 &&
-    mailAdress.value.length > 4 &&
-    //mailAdress.includes('@') &&
-    //mailAdress.includes('.') &&
-    message.value.length > 0
+    firstNameInput.value.length > 0 &&
+    lastNameInput.value.length > 0 &&
+    mailAdressInput.value.length > 4 &&
+    mailAdressInput.value.includes('@') &&
+    mailAdressInput.value.includes('.') &&
+    messageInput.value.length > 0
   ) {
     event.preventDefault();
     alert(

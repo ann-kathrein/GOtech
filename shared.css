@@ -244,7 +244,7 @@ NAV
   width: 1.7em;
   position: relative;
   display: block;
-  bottom: 50px;
+  bottom: 40px;
   left: 300px;
   cursor: pointer;
 }
@@ -278,7 +278,21 @@ NAV
   width: 230px;
 }
 
+/*
+.hamIcon:before .hamburger-active {
+  transform: translateY(12px) rotate(135deg);
+}
+
+.hamIcon:after .hamburger-active {
+  transform: translateY(-12px) rotate(-135deg);
+}
+
+span > .hamIcon .hamburger-active {
+  transform: scale(0);
+}*/
+
 /*soll das Menü zu einem X drehen // funktioniert nicht */
+
 /*.hamIconContainer .hamburger-active {
   color: #ffffff;
 }
@@ -288,12 +302,12 @@ NAV
   transform: rotate(-135deg);
 }
 
-.hamIcon .hamburger-active :before,
-.hamIcon .hamburger-active:after {
+.hamIcon:before .hamburger-active,
+.hamIcon:after .hamburger-active {
   top: 0;
 }
 
-.hamIcon .hamburger-active :before {
+.hamIcon:before .hamburger-active {
   transform: rotate(90deg);
 }*/
 
