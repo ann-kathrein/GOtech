@@ -43,7 +43,7 @@ function validate() {
     alert('Please fill in all fields.');
   }
 }
-submitBtn.addEventListener('click', validate, openModal);
+submitBtn.addEventListener('click', validate);
 
 //Versuch Modal - funktioniert nicht
 
@@ -64,3 +64,5 @@ window.onclick = function() {
     modal.style.display = 'none';
   }
 };*/
+
+/* Dropdown List */

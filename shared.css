@@ -513,6 +513,23 @@ input-placeholder {
   margin-top: 30px;
 }
 
+/* Dropdown List*/
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-dropdown {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  margin: 0 15px 0 0;
+}
+
+/* Dropdown List end*/
+
 .purplebtn-formular {
   background-image: linear-gradient(to right, #6362d7, #a174db);
   border-radius: 4px;
