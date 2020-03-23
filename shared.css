@@ -234,7 +234,7 @@ NAV
   color: #555555;
 }
 
-.navMobileLinks a:hover {
+.navMobileLinks > a:hover {
   color: #9d60eb;
 }
 
@@ -278,42 +278,27 @@ NAV
   width: 230px;
 }
 
-/*
-.hamIcon:before .hamburger-active {
-  transform: translateY(12px) rotate(135deg);
-}
+/* Close Icon*/
 
-.hamIcon:after .hamburger-active {
-  transform: translateY(-12px) rotate(-135deg);
-}
-
-span > .hamIcon .hamburger-active {
-  transform: scale(0);
-}*/
-
-/*soll das Menü zu einem X drehen // funktioniert nicht */
-
-/*.hamIconContainer .hamburger-active {
-  color: #ffffff;
-}
-
-.hamIcon .hamburger-active {
+.hamburger-active.hamIcon {
   background: transparent;
   transform: rotate(-135deg);
 }
 
-.hamIcon:before .hamburger-active,
-.hamIcon:after .hamburger-active {
+.hamburger-active.hamIcon:before,
+.hamburger-active.hamIcon:after {
   top: 0;
 }
 
-.hamIcon:before .hamburger-active {
+.hamburger-active.hamIcon:before {
   transform: rotate(90deg);
-}*/
+}
 
 .active {
   color: #a174db;
 }
+
+/*Wide Screen Navbar */
 
 @media (min-width: 40rem) {
   .mainNav {
@@ -537,6 +522,44 @@ input-placeholder {
   padding: 5px 10px;
   margin: 15px 25px;
 }
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* MODAL */
+/*.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+/*.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}*/
 
 @media (min-width: 40rem) {
   .formular {

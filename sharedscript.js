@@ -25,8 +25,6 @@ const mailAdressInput = document.getElementById('mailAdress');
 const messageInput = document.getElementById('message');
 const submitBtn = document.getElementById('submitBtn');
 
-//Modal;
-
 function validate() {
   //let mailAdressClean = mailAdressInput.toLowerCase();
   if (
@@ -45,4 +43,24 @@ function validate() {
     alert('Please fill in all fields.');
   }
 }
-submitBtn.addEventListener('click', validate);
+submitBtn.addEventListener('click', validate, openModal);
+
+//Versuch Modal - funktioniert nicht
+
+/*const modal = document.getElementById('myModal');
+let span = document.getElementsByClassName('close')[0];
+
+function openModal() {
+  modal.style.display = 'block';
+  `Name: ${firstNameInput.value} ${lastNameInput.value}, eMail: ${mailAdressInput.value}, Message: ${messageInput.value}`;
+} --> oben in if einbauen
+
+span.onclick = function closemodal() {
+  modal.style.display = 'none';
+};
+
+window.onclick = function() {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+};*/
