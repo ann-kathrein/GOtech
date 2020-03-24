@@ -395,13 +395,13 @@
   .quote-left {
     position: absolute;
     transform: scaleX(-1);
-    left: 350px;
+    left: 300px;
     top: 210px;
   }
 
   .quote-right {
     position: absolute;
-    right: 350px;
+    right: 300px;
     top: 210px;
   }
 }
@@ -438,7 +438,7 @@
 @media (min-width: 40rem) {
   .albert {
     position: relative;
-    left: 150px;
+    left: 100px;
   }
 
   .jurica {
@@ -465,21 +465,21 @@
 
   .azami {
     position: relative;
-    left: 320px;
+    left: 230px;
     bottom: 80px;
     display: unset;
   }
 
   .eduardo {
     position: relative;
-    left: 300px;
+    left: 200px;
     top: 80px;
     display: unset;
   }
 
   .noname {
     position: relative;
-    left: 130px;
+    left: 20px;
     top: 270px;
     display: unset;
   }

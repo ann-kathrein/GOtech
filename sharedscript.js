@@ -64,5 +64,3 @@ window.onclick = function() {
     modal.style.display = 'none';
   }
 };*/
-
-/* Dropdown List */

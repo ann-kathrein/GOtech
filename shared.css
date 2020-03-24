@@ -514,19 +514,35 @@ input-placeholder {
 }
 
 /* Dropdown List*/
+select {
+  border: none;
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  color: #555555;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 5px 1px #ebebeb;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
 
 .dropdown {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 60vw;
 }
 
-.select-dropdown {
-  position: relative;
+/* doesn't work */
+/*i {
+  border: solid #555555;
+  border-width: 0 2px 2px 0;
   display: inline-block;
-  max-width: 100%;
-  margin: 0 15px 0 0;
+  padding: 3px;
 }
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}*/
 
 /* Dropdown List end*/
 
@@ -637,40 +653,40 @@ input-placeholder {
 .yellowman {
   position: absolute;
   left: 3px;
-  height: 15%;
+  height: 12%;
   bottom: 5px;
 }
 
 .purpleman {
   position: absolute;
   right: 40px;
-  height: 15%;
+  height: 12%;
   bottom: 5px;
 }
 
 .pinkwoman {
   position: absolute;
   right: 2px;
-  height: 15%;
+  height: 12%;
   bottom: 5px;
 }
 
 @media (min-width: 40rem) {
   .yellowman {
     position: absolute;
-    left: 35px;
+    left: 25px;
     height: 23%;
     bottom: 5px;
   }
   .purpleman {
     position: absolute;
-    right: 115px;
+    right: 80px;
     height: 23%;
     bottom: 5px;
   }
   .pinkwoman {
     position: absolute;
-    right: 40px;
+    right: 10px;
     height: 23%;
     bottom: 5px;
   }
