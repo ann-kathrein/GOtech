@@ -221,11 +221,15 @@ NAV
 .menu {
   position: absolute;
   width: 300px;
-  margin: -100px 0 0 -125px;
+  margin: -100px 0 0 -250px;
   padding: 25px;
   padding-top: 125px;
-  background: #ebebeb;
+  background: #f6f3ff;
   display: none;
+}
+
+ul.navMobileLinks {
+  padding-left: 100px;
 }
 
 .navMobileLinks > a {
@@ -234,8 +238,55 @@ NAV
   color: #555555;
 }
 
-.navMobileLinks > a:hover {
+.navMobileLinks > a > li:hover {
   color: #9d60eb;
+}
+
+ul.navMobileLinks > a > li {
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+
+.iconNavBarHome {
+  position: absolute;
+  left: 80px;
+  bottom: 305px;
+  height: 5%;
+}
+
+.iconNavBarAbout {
+  position: absolute;
+  left: 80px;
+  bottom: 255px;
+  height: 5%;
+}
+
+.iconNavBarPortfolio {
+  position: absolute;
+  left: 80px;
+  bottom: 205px;
+  height: 6%;
+}
+
+.iconNavBarProduct {
+  position: absolute;
+  left: 80px;
+  bottom: 155px;
+  height: 7%;
+}
+
+.iconNavBarCareer {
+  position: absolute;
+  left: 80px;
+  bottom: 105px;
+  height: 6%;
+}
+
+.iconNavBarBlog {
+  position: absolute;
+  left: 80px;
+  bottom: 55px;
+  height: 6%;
 }
 
 .hamIconContainer {
@@ -275,7 +326,7 @@ NAV
 
 .menu-active {
   display: block;
-  width: 230px;
+  width: 350px;
 }
 
 /* Close Icon*/
@@ -295,7 +346,7 @@ NAV
 }
 
 .active {
-  color: #a174db;
+  color: #9d60eb;
 }
 
 /*Wide Screen Navbar */
