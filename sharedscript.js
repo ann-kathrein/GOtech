@@ -30,59 +30,92 @@ contactBtn.addEventListener("click", {
 
 // open and close
 
+function openModal() {
+  modal.style.display = 'block';
+}
+
+function closeModal() {
+  modal.style.display = 'none';
+}
+
+function closeByWindow(e) {
+  if (e.target == modal) {
+    modal.style.display = 'none';
+  }
+}
+
 let submitBtn = document.getElementById('submitBtn');
 let modal = document.querySelector('.modal');
 let closeBtn = document.querySelector('.close-btn');
 
-submitBtn.onclick = function openModal() {
-  modal.style.display = 'block';
-};
-closeBtn.onclick = function closeModal() {
-  modal.style.display = 'none';
-};
-window.onclick = function(e) {
-  if (e.target == modal) {
-    modal.style.display = 'none';
-  }
-};
+submitBtn.onclick = validate;
+closeBtn.onclick = closeModal;
+window.onclick = closeByWindow;
 
 // Close Modal with OK and Change Button
 
-let okBtn = document.getElementById('.purplebtnModal');
-let changeBtn = document.getElementById('.purpleblinetnModal');
+let okBtn = document.getElementById('purplelinebtnModal');
+let changeBtn = document.getElementById('purplebtnModal');
 
-okBtn.onclick = function closeModal() {
-  modal.style.display = 'none';
-};
-changeBtn.onclick = function closeModal() {
-  modal.style.display = 'none';
-};
+okBtn.onclick = closeModal;
+changeBtn.onclick = closeModal;
 
 // Validate Data
 
-const firstNameInput = document.getElementById('firstName');
-const lastNameInput = document.getElementById('lastName');
-const mailAdressInput = document.getElementById('mailAdress');
-const messageInput = document.getElementById('message');
+function validiereMailInput(input) {
+  let isInputValid =
+    input.value.length > 4 &&
+    input.value.includes('@') &&
+    input.value.includes('.');
+  return manipulateInputField(input, isInputValid);
+}
 
-function validate() {
-  if (
-    firstNameInput.value.length > 0 &&
-    lastNameInput.value.length > 0 &&
-    mailAdressInput.value.length > 4 &&
-    mailAdressInput.value.includes('@') &&
-    mailAdressInput.value.includes('.') &&
-    messageInput.value.length > 0
-  ) {
-    openModal();
+function validiereInput(input) {
+  let isInputValid = input.value.length > 0;
+  return manipulateInputField(input, isInputValid);
+}
+
+function manipulateInputField(input, isInputValid) {
+  if (isInputValid == 1) {
+    input.style.border = 'none';
+    return true;
   } else {
-    let errormessage = '';
-    errormessage != '';
-    alert(errormessage);
+    input.style.border = '1px solid red';
     return false;
   }
 }
-submitBtn.addEventListener('click', validate);
+
+function validate() {
+  let isValid = true;
+
+  let firstNameInput = document.getElementById('firstName');
+  isValid = validiereInput(firstNameInput) && isValid;
+  let lastNameInput = document.getElementById('lastName');
+  isValid = validiereInput(lastNameInput) && isValid;
+  let mailAdressInput = document.getElementById('mailAdress');
+  isValid = validiereMailInput(mailAdressInput) && isValid;
+  let messageInput = document.getElementById('message');
+  isValid = validiereInput(messageInput) && isValid;
+  let problemInput = document.getElementById('problem');
+
+  if (isValid == 1) {
+    const space = ' ';
+    document.getElementById('firstNameModal').innerHTML +=
+      space + firstNameInput.value;
+    document.getElementById('lastNameModal').innerHTML +=
+      space + lastNameInput.value;
+    document.getElementById('emailModal').innerHTML +=
+      space + mailAdressInput.value;
+    document.getElementById('messageModal').innerHTML +=
+      space + messageInput.value;
+    document.getElementById('problemModal').innerHTML +=
+      space + problemInput.value;
+
+    openModal();
+  } else {
+    let errormessage = 'Fehler';
+  }
+}
 
 // WORKING
 /*function validate() {

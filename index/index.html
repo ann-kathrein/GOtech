@@ -422,20 +422,20 @@
             <div class="email">
               <div><p>Which Related Problem You Are Facing?</p></div>
               <div id="dropdown">
-                <select>
-                  <option value="0" class="select-dropdown__list-item"
+                <select id="problem">
+                  <option value="Select One:" class="select-dropdown__list-item"
                     >Select One:</option
                   >
-                  <option value="1" class="select-dropdown__list-item"
+                  <option value="Our Work" class="select-dropdown__list-item"
                     >Our Work</option
                   >
-                  <option value="2" class="select-dropdown__list-item"
+                  <option value="Pricing" class="select-dropdown__list-item"
                     >Pricing</option
                   >
-                  <option value="3" class="select-dropdown__list-item"
+                  <option value="Contact" class="select-dropdown__list-item"
                     >Contact</option
                   >
-                  <option value="4" class="select-dropdown__list-item"
+                  <option value="Products" class="select-dropdown__list-item"
                     >Products</option
                   >
                 </select>
@@ -467,15 +467,19 @@
               </div>
 
               <div class="sumData">
-                <p>Firstname:</p>
-                <p>Lastname:</p>
-                <p>Email Adress:</p>
-                <p>Your Problem:</p>
-                <p>Your Message:</p>
+                <p id="firstNameModal">Firstname:</p>
+                <p id="lastNameModal">Lastname:</p>
+                <p id="emailModal">Email Adress:</p>
+                <p id="problemModal">Your Problem:</p>
+                <p id="messageModal">Your Message:</p>
               </div>
               <div class="btnModal">
-                <button class="purplebtnModal">Change</button>
-                <button class="purplelinebtnModal">OK</button>
+                <button class="purplebtnModal" id="purplebtnModal">
+                  Change
+                </button>
+                <button class="purplelinebtnModal" id="purplelinebtnModal">
+                  OK
+                </button>
               </div>
               <div class="modal-footer">
                 <p>&copy; GoTech 2020</p>
