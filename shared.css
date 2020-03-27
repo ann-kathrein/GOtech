@@ -66,6 +66,10 @@ p {
   font-size: 0.75rem;
 }
 
+button {
+  cursor: pointer;
+}
+
 /*@media (min-width: 40rem) {
     p {
         font-size: 0.75rem;
@@ -114,104 +118,7 @@ NAV
   margin-left: 20px;
 }
 
-/* ##### CSS only mobileNav WORKING #####
-#menuToggle {
-	display: block;
-	position: relative;
-	left: 280px;
-	top: -25px;
-	z-index: 1;
-	-webkit-user-select: none;
-	user-select: none;
-}
-
-#menuToggle a {
-	text-decoration: none;
-	color: #232323;
-	transition: color 0.3s ease;
-}
-
-#menuToggle a:hover {
-	color: #a174db;
-}
-
-#menuToggle input {
-	display: block;
-	width: 40px;
-	height: 32px;
-	position: absolute;
-	top: -7px;
-	left: -5px;
-	cursor: pointer;
-	opacity: 0;
-	z-index: 2;
-	-webkit-touch-callout: none;
-}
-
-#menuToggle span {
-	display: block;
-	width: 33px;
-	height: 4px;
-	margin-bottom: 5px;
-	position: relative;
-	background: #a174db;
-	border-radius: 3px;
-	z-index: 1;
-	transform-origin: 4px 0px;
-	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-		opacity 0.55s ease;
-}
-
-#menuToggle span:first-child {
-	transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2) {
-	transform-origin: 0% 100%;
-}
-
-#menuToggle input:checked ~ span {
-	opacity: 1;
-	transform: rotate(45deg) translate(-2px, -1px);
-	background: #a174db;
-}
-
-#menuToggle input:checked ~ span:nth-last-child(3) {
-	opacity: 0;
-	transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-#menuToggle input:checked ~ span:nth-last-child(2) {
-	transform: rotate(-45deg) translate(0, -1px);
-}
-
-#menu {
-	position: absolute;
-	width: 300px;
-	margin: -100px 0 0 -150px;
-	padding: 50px;
-	padding-top: 125px;
-	background: #ebebeb;
-	list-style-type: none;
-	-webkit-font-smoothing: antialiased;
-	transform-origin: 0% 0%;
-	transform: translate(0, -100%);
-	/*transition: transform 0.5s cubic-bezier(0.5,0.5,0.05,1.0);*/
-/*}
-
-#menu li {
-	padding: 10px 0;
-}
-
-#menu a:hover {
-	color: #a174db;
-}
-
-#menuToggle input:checked ~ ul {
-	transform: none;
-}
-########## END mobileNav CSS only ############
-*/
+/* Small Screen NAvbar */
 
 .navigation {
   transition: right 0.3s ease-in;
@@ -445,7 +352,7 @@ ul.navMobileLinks > a > li {
   display: none;
 }
 
-.purplebtn {
+.contactBtn {
   background-image: linear-gradient(to right, #6362d7, #a174db);
   border-radius: 4px;
   color: #ffffff;
@@ -453,8 +360,9 @@ ul.navMobileLinks > a > li {
   border: none;
   padding: 5px 10px;
 }
+
 @media (min-width: 40rem) {
-  .purplebtn {
+  .contactBtn {
     background-image: linear-gradient(to right, #6362d7, #a174db);
     border-radius: 4px;
     color: #ffffff;
@@ -464,7 +372,7 @@ ul.navMobileLinks > a > li {
   }
 }
 
-.mainNav .purplebtn {
+.mainNav .contactBtn {
   font-size: 0.75rem;
   padding: 5px 10px;
 }
@@ -472,6 +380,15 @@ ul.navMobileLinks > a > li {
 /* =======================================
 MAIN
 ======================================= */
+
+.purplebtn {
+  background-image: linear-gradient(to right, #6362d7, #a174db);
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  padding: 10px 20px;
+}
 
 .centered {
   text-align: center;
@@ -607,43 +524,107 @@ select {
   margin: 15px 25px;
 }
 
+/* MODAL */
+
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  position: fixed;
+  padding-top: 50px;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
-/* MODAL */
-/*.modal-content {
-  background-color: #fefefe;
-  margin: auto;
+.modal-header {
+  padding-left: 40px;
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  margin: auto;
+  width: 75%;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
 }
 
-/* The Close Button */
-/*.close {
-  color: #aaaaaa;
+.sumData {
+  padding-left: 80px;
+}
+
+.close-btn {
   float: right;
-  font-size: 28px;
+  color: lightgray;
+  font-size: 24px;
   font-weight: bold;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: darkgray;
+}
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}*/
+.modal-footer {
+  text-align: center;
+  color: #999999;
+  margin-top: 20px;
+}
+
+.btnModal {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.purplelinebtnModal {
+  border-radius: 4px;
+  color: #a174db;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #a174db;
+  padding: 5px 10px;
+  margin: 0px 20px;
+}
+
+.purplebtnModal {
+  background-image: linear-gradient(to right, #6362d7, #a174db);
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  padding: 5px 10px;
+}
+
+.email-field:valid {
+  border-color: none;
+}
+.email-field:invalid {
+  border-color: red;
+}
 
 @media (min-width: 40rem) {
   .formular {

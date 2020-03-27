@@ -18,16 +18,76 @@ function navStatus() {
   }
 }
 
+// Contact Us Button links to the Formular !NOT WORKING!
+/*let contactBtn = document.querySelector('contactBtn');
+contactBtn.addEventListener("click", {
+  location.href = '#ContactUs';
+});*/
+
 // ####### FORMULAR #########
+
+// MODAL
+
+// open and close
+
+let submitBtn = document.getElementById('submitBtn');
+let modal = document.querySelector('.modal');
+let closeBtn = document.querySelector('.close-btn');
+
+submitBtn.onclick = function openModal() {
+  modal.style.display = 'block';
+};
+closeBtn.onclick = function closeModal() {
+  modal.style.display = 'none';
+};
+window.onclick = function(e) {
+  if (e.target == modal) {
+    modal.style.display = 'none';
+  }
+};
+
+// Close Modal with OK and Change Button
+
+let okBtn = document.getElementById('.purplebtnModal');
+let changeBtn = document.getElementById('.purpleblinetnModal');
+
+okBtn.onclick = function closeModal() {
+  modal.style.display = 'none';
+};
+changeBtn.onclick = function closeModal() {
+  modal.style.display = 'none';
+};
+
+// Validate Data
+
 const firstNameInput = document.getElementById('firstName');
 const lastNameInput = document.getElementById('lastName');
 const mailAdressInput = document.getElementById('mailAdress');
 const messageInput = document.getElementById('message');
-const submitBtn = document.getElementById('submitBtn');
 
 function validate() {
-  //let mailAdressClean = mailAdressInput.toLowerCase();
   if (
+    firstNameInput.value.length > 0 &&
+    lastNameInput.value.length > 0 &&
+    mailAdressInput.value.length > 4 &&
+    mailAdressInput.value.includes('@') &&
+    mailAdressInput.value.includes('.') &&
+    messageInput.value.length > 0
+  ) {
+    openModal();
+  } else {
+    let errormessage = '';
+    errormessage != '';
+    alert(errormessage);
+    return false;
+  }
+}
+submitBtn.addEventListener('click', validate);
+
+// WORKING
+/*function validate() {
+  //let mailAdressClean = mailAdressInput.toLowerCase();
+  /*if (
     firstNameInput.value.length > 0 &&
     lastNameInput.value.length > 0 &&
     mailAdressInput.value.length > 4 &&
@@ -43,24 +103,4 @@ function validate() {
     alert('Please fill in all fields.');
   }
 }
-submitBtn.addEventListener('click', validate);
-
-//Versuch Modal - funktioniert nicht
-
-/*const modal = document.getElementById('myModal');
-let span = document.getElementsByClassName('close')[0];
-
-function openModal() {
-  modal.style.display = 'block';
-  `Name: ${firstNameInput.value} ${lastNameInput.value}, eMail: ${mailAdressInput.value}, Message: ${messageInput.value}`;
-} --> oben in if einbauen
-
-span.onclick = function closemodal() {
-  modal.style.display = 'none';
-};
-
-window.onclick = function() {
-  if (event.target == modal) {
-    modal.style.display = 'none';
-  }
-};*/
+submitBtn.addEventListener('click', validate);*/

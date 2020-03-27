@@ -37,7 +37,7 @@
           </div>
         </li>
         <li class="navItem">
-          <button class="purplebtn" type="button">Contact Us</button>
+          <button class="contactBtn" type="button">Contact Us</button>
         </li>
       </ul>
     </nav>
@@ -95,29 +95,6 @@
       </div>
     </nav>
   </header>
-
-  <!-- ##### CSS only mobile Nav WORKING #####
-</header>
-  <header class=smallScreen>
-    <nav role="navigation">
-      <img src="../images/Gruppe 2199.png" class="mainNavimg" alt="Logo GOtech">
-      <div id="menuToggle">
-          <input type="checkbox"/>
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu">
-              <a href="index.html" class="active"><li>Home</li></a>
-              <a href="#"><li>About</li></a>
-              <a href="#"><li>Portfolio</li></a>
-              <a href="#"><li>Product</li></a>
-              <a href="../careers/careers.html"><li>Career</li></a>
-              <a href="#"><li>Blog</li></a>
-            </ul>
-        </div>
-    </nav>
-</header>
--->
 
   <body>
     <main>
@@ -399,7 +376,7 @@
         </div>
       </section>
 
-      <section class="space">
+      <section class="space" id="ContactUs">
         <div class="section-container6">
           <div class="centered">
             <h3 class="unbold">Facing Problem?</h3>
@@ -415,6 +392,7 @@
                   class="inputFormular"
                   placeholder="Robert Lee"
                   id="firstName"
+                  required
                 />
                 <div class="greylaneFormular"></div>
               </div>
@@ -425,6 +403,7 @@
                   class="inputFormular"
                   placeholder="Anderson"
                   id="lastName"
+                  required
                 />
                 <div class="greylaneFormular"></div>
               </div>
@@ -436,6 +415,7 @@
                 class="inputFormular"
                 placeholder="evin.jones@mail.com"
                 id="mailAdress"
+                required
               />
               <div class="greylaneFormular"></div>
             </div>
@@ -473,17 +453,34 @@
                 class="inputFormular"
                 placeholder="Lorem Ipsum is simply dummy text of the printing and...……."
                 id="message"
+                required
               ></textarea>
               <div class="greylane-message"></div>
             </div>
             <button class="purplebtn-formular" id="submitBtn">Submit</button>
-
-            <!--<div id="modal" class="modal">
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p></p>
+          </div>
+          <div class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close-btn">&times;</span>
+                <h4>Please check your personal Input</h4>
               </div>
-            </div>-->
+
+              <div class="sumData">
+                <p>Firstname:</p>
+                <p>Lastname:</p>
+                <p>Email Adress:</p>
+                <p>Your Problem:</p>
+                <p>Your Message:</p>
+              </div>
+              <div class="btnModal">
+                <button class="purplebtnModal">Change</button>
+                <button class="purplelinebtnModal">OK</button>
+              </div>
+              <div class="modal-footer">
+                <p>&copy; GoTech 2020</p>
+              </div>
+            </div>
           </div>
           <img src="../images/Group -4.png" class="yellowman" />
           <img src="../images/Group -6.png" class="purpleman" />
