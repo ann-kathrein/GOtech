@@ -27,10 +27,10 @@ function linkToContactForm() {
 }
 
 let contactBtn = document.getElementById('linkToContact');
+let contactBtnMobile = document.getElementById('linkToContactMobile');
 
 contactBtn.onclick = linkToContactForm;
-
-// navBar monile: id for Button = linkToContactMobile
+contactBtnMobile.onclick = linkToContactForm;
 
 // ####### FORMULAR #########
 
