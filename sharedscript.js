@@ -18,17 +18,23 @@ function navStatus() {
   }
 }
 
-// Contact Us Button links to the Formular !NOT WORKING!
-/*let contactBtn = document.querySelector('contactBtn');
-contactBtn.addEventListener("click", {
+// #####################
+
+// Contact Us Button links to the Formular
+
+function linkToContactForm() {
   location.href = '#ContactUs';
-});*/
+}
+
+let contactBtn = document.getElementById('linkToContact');
+
+contactBtn.onclick = linkToContactForm;
 
 // ####### FORMULAR #########
 
 // MODAL
 
-// open and close
+// open and close Modal
 
 function openModal() {
   modal.style.display = 'block';
@@ -53,7 +59,6 @@ closeBtn.onclick = closeModal;
 window.onclick = closeByWindow;
 
 // Close Modal with OK and Change Button
-
 let okBtn = document.getElementById('purplelinebtnModal');
 let changeBtn = document.getElementById('purplebtnModal');
 
@@ -61,7 +66,7 @@ okBtn.onclick = closeModal;
 changeBtn.onclick = closeModal;
 
 // Validate Data
-
+//Validation for  Mail
 function validiereMailInput(input) {
   let isInputValid =
     input.value.length > 4 &&
@@ -70,21 +75,24 @@ function validiereMailInput(input) {
   return manipulateInputField(input, isInputValid);
 }
 
+//Validation for Firstname, Lastname, message
 function validiereInput(input) {
   let isInputValid = input.value.length > 0;
   return manipulateInputField(input, isInputValid);
 }
 
+// if  Input not valid set border
 function manipulateInputField(input, isInputValid) {
   if (isInputValid == 1) {
     input.style.border = 'none';
     return true;
   } else {
-    input.style.border = '1px solid red';
+    input.style.border = '1px solid #856DD7';
     return false;
   }
 }
 
+// get Inputfields and validate them with functions on top
 function validate() {
   let isValid = true;
 
@@ -98,6 +106,7 @@ function validate() {
   isValid = validiereInput(messageInput) && isValid;
   let problemInput = document.getElementById('problem');
 
+  // if input valid openmodal and add Input
   if (isValid == 1) {
     const space = ' ';
     document.getElementById('firstNameModal').innerHTML +=
@@ -136,4 +145,5 @@ function validate() {
     alert('Please fill in all fields.');
   }
 }
+
 submitBtn.addEventListener('click', validate);*/

@@ -359,6 +359,9 @@ ul.navMobileLinks > a > li {
   font-family: 'Poppins', sans-serif;
   border: none;
   padding: 5px 10px;
+  position: absolute;
+  left: 195px;
+  bottom: 20px;
 }
 
 @media (min-width: 40rem) {
