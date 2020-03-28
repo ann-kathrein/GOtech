@@ -372,6 +372,9 @@ ul.navMobileLinks > a > li {
     font-family: 'Poppins', sans-serif;
     border: none;
     padding: 10px 20px;
+    position: unset;
+    left: unset;
+    bottom: unset;
   }
 }
 

@@ -30,6 +30,8 @@ let contactBtn = document.getElementById('linkToContact');
 
 contactBtn.onclick = linkToContactForm;
 
+// navBar monile: id for Button = linkToContactMobile
+
 // ####### FORMULAR #########
 
 // MODAL
