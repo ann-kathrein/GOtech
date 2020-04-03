@@ -111,16 +111,17 @@ function validate() {
   // if input valid openmodal and add Input
   if (isValid == 1) {
     const space = ' ';
+
     document.getElementById('firstNameModal').innerHTML +=
-      space + firstNameInput.value;
+      space + firstNameInput.value.bold();
     document.getElementById('lastNameModal').innerHTML +=
-      space + lastNameInput.value;
+      space + lastNameInput.value.bold();
     document.getElementById('emailModal').innerHTML +=
-      space + mailAdressInput.value;
+      space + mailAdressInput.value.bold();
     document.getElementById('messageModal').innerHTML +=
-      space + messageInput.value;
+      space + messageInput.value.bold();
     document.getElementById('problemModal').innerHTML +=
-      space + problemInput.value;
+      space + problemInput.value.bold();
 
     openModal();
   } else {
